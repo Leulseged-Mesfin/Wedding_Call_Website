@@ -134,6 +134,7 @@ function WeddingInvitation() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [galleryImages, setGalleryImages] = useState(GALLERY_IMAGES);
   const [imgOpacity, setImgOpacity] = useState(1);
+  const [imgTransform, setImgTransform] = useState('scale(1)');
 
   const [rsvpForm, setRsvpForm] = useState({
     name: '',
@@ -269,11 +270,21 @@ function WeddingInvitation() {
 
   const showSlide = (idx) => {
     const next = (idx + galleryImages.length) % galleryImages.length;
-    setImgOpacity(0.3);
+    
+    // Fade out current image
+    setImgOpacity(0);
+    setImgTransform('scale(0.98)');
+    
     setTimeout(() => {
       setCurrentSlide(next);
+      // Fade in new image
+      setImgTransform('scale(1.02)');
       setImgOpacity(1);
-    }, 150);
+      
+      setTimeout(() => {
+        setImgTransform('scale(1)');
+      }, 100);
+    }, 300);
   };
 
   const nextSlide = () => showSlide(currentSlide + 1);
@@ -440,7 +451,7 @@ function WeddingInvitation() {
                   <span className="text-xl">💛</span>
                 </div>
                 <p className="text-sm text-gold-200 italic tracking-wide mb-6 font-serif">
-                  October 24, 2026  | ጥቅምት 14, 2019
+                  October 24, 2026 | ጥቅምት 14, 2019
                 </p>
 
                 <div className="bg-black/50 backdrop-blur-sm rounded-3xl mx-auto p-5 lg:p-6 border border-gold-500/40 mb-6">
@@ -454,8 +465,7 @@ function WeddingInvitation() {
                     ))}
                   </div>
                   <div className="grid grid-cols-7 gap-y-2.5 text-xs lg:text-sm text-neutral-300 font-medium items-center">
-                    <div /><div /><div /><div />
-                    {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23].map(
+                    {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13].map(
                       (n) => (
                         <div key={n} className="py-1">
                           {n}
@@ -464,15 +474,14 @@ function WeddingInvitation() {
                     )}
                     <div className="flex items-center justify-center">
                       <span className="w-8 h-8 rounded-full bg-yellow-500 text-black font-extrabold flex items-center justify-center shadow-[0_0_12px_rgba(229,184,59,0.7)] text-sm">
-                        24
+                        14
                       </span>
                     </div>
-                    {[25, 26, 27, 28, 29, 30].map((n) => (
+                    {[15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30].map((n) => (
                       <div key={n} className="py-1">
                         {n}
                       </div>
                     ))}
-                    <div />
                   </div>
                 </div>
 
@@ -677,15 +686,18 @@ function WeddingInvitation() {
                 <div className="relative w-full lg:max-w-3xl mx-auto rounded-3xl overflow-hidden border border-gold-600/40 bg-[#0d0d0f] aspect-[3/4] max-h-[70vh]">
                   <img
                     alt={`Wedding photo ${currentSlide + 1}`}
-                    className="w-full h-full object-cover transition-all duration-500 filter contrast-[1.05]"
-                    style={{ opacity: imgOpacity }}
+                    className="w-full h-full object-cover transition-all duration-300 ease-in-out filter contrast-[1.05]"
+                    style={{ 
+                      opacity: imgOpacity,
+                      transform: imgTransform
+                    }}
                     src={galleryImages[currentSlide]}
                   />
                   <button
                     type="button"
                     aria-label="Previous photo"
                     onClick={prevSlide}
-                    className="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-gold-500 text-black font-bold flex items-center justify-center shadow-xl active:scale-90 transition-transform z-10"
+                    className="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-yellow-500 text-black font-bold flex items-center justify-center shadow-xl active:scale-90 transition-transform z-10"
                   >
                     ❮
                   </button>
@@ -693,7 +705,7 @@ function WeddingInvitation() {
                     type="button"
                     aria-label="Next photo"
                     onClick={nextSlide}
-                    className="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-gold-500 text-black font-bold flex items-center justify-center shadow-xl active:scale-90 transition-transform z-10"
+                    className="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-yellow-500 text-black font-bold flex items-center justify-center shadow-xl active:scale-90 transition-transform z-10"
                   >
                     ❯
                   </button>
