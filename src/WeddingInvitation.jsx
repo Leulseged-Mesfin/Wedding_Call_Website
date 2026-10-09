@@ -222,8 +222,8 @@ function WeddingInvitation() {
   // Transition countdown
   useEffect(() => {
     if (screen !== 'transition') return;
-    setCountdownDigit(3);
-    let n = 3;
+    setCountdownDigit(5);
+    let n = 5;
     const id = setInterval(() => {
       n -= 1;
       if (n > 0) {
