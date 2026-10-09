@@ -3,6 +3,7 @@ import heroImage from './assets/DSC04429.JPG';
 import heroImage2 from './assets/DSC04750.JPG';
 import pageBackground from './assets/DSC04655.JPG';
 import qrCode from './assets/qrcode.png';
+import teamSong from './musics/HannaTekle0403ወዳጅ.mp3';
  
 /**
  * Asnake & Dr. Tsion — Wedding Invitation
@@ -50,10 +51,11 @@ const LOCATIONS = [
   },
 ];
 
-const WEDDING_TARGET = new Date('2026-05-03T09:00:00+03:00').getTime();
+const WEDDING_TARGET = new Date('2026-10-24T09:00:00+03:00').getTime();
 
-const AUDIO_SRC =
-  'https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3?filename=soft-piano-113337.mp3';
+const AUDIO_SRC = teamSong;
+// const AUDIO_SRC =
+//   'https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3?filename=soft-piano-113337.mp3';
 
 // Custom styles – Poppins
 const customStyles = `
@@ -320,11 +322,6 @@ function WeddingInvitation() {
               <img
                 alt="Dr Fikre & Eyerusalem"
                 className="w-full h-full object-cover object-center filter brightness-[0.78] contrast-[1.05]"
-                // src="/assets/DSC04429.jpg"
-                // onError={(e) => {
-                //   e.currentTarget.src =
-                //     'https://lh3.googleusercontent.com/aida-public/AB6AXuCYJetjLcTIahBIAfpwYftYw15eodr93V6xT4j_aRfUIW8Q-ZgDj36bOj_I_BTsAJogXycJr5-5Sho-NuadU6wYHR_ear9N6N9jhAXoJb2suLtTDb980djqqX5fIG3z1wS0HZULNqd-OAUvM-5znJZA1wOj8U2498YU1wT4KlydVGABF5Vc99zSN0QNUipbH0T8jSdHEz62vqh3ve2TKaeaE7XUELche7InDIEurGjwXiVNxaMZ_cM9';
-                // }}
                 src={heroImage}
               />
               <div className="absolute inset-0 bg-gradient-to-b from-black/45 via-black/20 to-black/90" />
@@ -367,11 +364,6 @@ function WeddingInvitation() {
               <img
                 alt="Dr Fikre & Eyerusalem Wedding"
                 className="w-full h-full object-cover object-center filter brightness-[0.72]"
-                // src="/assets/DSC04429.jpg"
-                // onError={(e) => {
-                //   e.currentTarget.src =
-                //     'https://lh3.googleusercontent.com/aida-public/AB6AXuAiL2ldMf1yJEKQ6gEHc1YpB-YUC525k5lww7K8GBkgUVChoz27VyQn5S5sX6I3wBGvxvuB8VftNArX7-d7SUqrMA3CbLe8LJSdxRxsCqn2_6-qJhJhgRaDLG6LXMAHNaAbbNR_EEwAji81rHW_dXDYwmZ-kmq1dHZqha7uL5ZdXxbXdHOYPbibHlINw677sTYHEWtfBZJrj6szUegPW5zx9w-5CH0g6Q8QSu1yCMJSwsV_Z_i0tYc4';
-                // }}
                 src={heroImage2}
               />
               <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/25 to-black/85" />
@@ -451,7 +443,7 @@ function WeddingInvitation() {
                   October 24, 2026  | ጥቅምት 14, 2019
                 </p>
 
-                <div className="bg-black/50 backdrop-blur-sm rounded-3xl mx-20 p-5 lg:p-6 border border-gold-500/40 mb-6">
+                <div className="bg-black/50 backdrop-blur-sm rounded-3xl mx-auto p-5 lg:p-6 border border-gold-500/40 mb-6">
                   <div className="flex items-center justify-center gap-2 text-[#ecd68f] text-base font-semibold mb-4">
                     <span>📅</span>
                     <span>ጥቅምት 2019 (October 2026)</span>
@@ -532,7 +524,7 @@ function WeddingInvitation() {
                       <div className="timeline-card flex-1 rounded-3xl p-5 lg:p-6 transition-all duration-300">
                         <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1 mb-1">
                           <span className="text-lg sm:text-xl font-bold text-gold-400 font-mono tracking-tight">
-                            05:00 – 07:30
+                            04:00 – 04:30
                           </span>
                           <span className="text-[10px] uppercase tracking-widest text-gold-600/90 font-semibold bg-gold-500/10 px-2.5 py-0.5 rounded-full border border-gold-500/20">
                             Morning
@@ -567,7 +559,7 @@ function WeddingInvitation() {
                       <div className="timeline-card flex-1 rounded-3xl p-5 lg:p-6 transition-all duration-300">
                         <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1 mb-1">
                           <span className="text-lg sm:text-xl font-bold text-gold-400 font-mono tracking-tight">
-                            08:00 – 10:00
+                            05:30 – 6:30
                           </span>
                           <span className="text-[10px] uppercase tracking-widest text-gold-600/90 font-semibold bg-gold-500/10 px-2.5 py-0.5 rounded-full border border-gold-500/20">
                             Ceremony
@@ -598,7 +590,7 @@ function WeddingInvitation() {
                       <div className="timeline-card flex-1 rounded-3xl p-5 lg:p-6 transition-all duration-300">
                         <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1 mb-1">
                           <span className="text-lg sm:text-xl font-bold text-gold-400 font-mono tracking-tight">
-                            10:00 – 01:00
+                            07:00 – 10:00
                           </span>
                           <span className="text-[10px] uppercase tracking-widest text-gold-600/90 font-semibold bg-gold-500/10 px-2.5 py-0.5 rounded-full border border-gold-500/20">
                             Celebration
@@ -652,14 +644,6 @@ function WeddingInvitation() {
                           loading="lazy"
                           referrerPolicy="no-referrer-when-downgrade"
                         />
-                        {/* <div className="absolute inset-0 bg-black/40 flex flex-col items-center justify-center p-4 text-center">
-                          <span className="w-8 h-8 rounded-full bg-red-600/90 text-white flex items-center justify-center shadow-lg mb-2 animate-bounce">
-                            📍
-                          </span>
-                          <span className="text-white text-xs lg:text-[10px] font-semibold tracking-wide bg-black/60 px-3 py-1 rounded-full">
-                            Use two fingers to move the map
-                          </span>
-                        </div> */}
                       </div>
                       <a
                         className="w-full mt-3 py-3 rounded-full bg-yellow-500 text-black font-semibold text-sm flex items-center justify-center gap-2 shadow-lg active:scale-95 transition-transform"
@@ -828,11 +812,6 @@ function WeddingInvitation() {
                    <img
                 alt="Dr Fikre & Eyerusalem"
                 className="w-50 h-50 object-cover object-center filter brightness-[0.78] contrast-[1.05]"
-                // src="/assets/DSC04429.jpg"
-                // onError={(e) => {
-                //   e.currentTarget.src =
-                //     'https://lh3.googleusercontent.com/aida-public/AB6AXuCYJetjLcTIahBIAfpwYftYw15eodr93V6xT4j_aRfUIW8Q-ZgDj36bOj_I_BTsAJogXycJr5-5Sho-NuadU6wYHR_ear9N6N9jhAXoJb2suLtTDb980djqqX5fIG3z1wS0HZULNqd-OAUvM-5znJZA1wOj8U2498YU1wT4KlydVGABF5Vc99zSN0QNUipbH0T8jSdHEz62vqh3ve2TKaeaE7XUELche7InDIEurGjwXiVNxaMZ_cM9';
-                // }}
                 src={qrCode}
               />
                 </div>
