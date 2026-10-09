@@ -841,7 +841,7 @@ function WeddingInvitation() {
                 </p>
                 <a
                   className="w-full max-w-xs mx-auto py-3 rounded-full bg-[#1e96d3] hover:bg-[#1880b4] text-white font-semibold text-sm flex items-center justify-center gap-2 shadow-lg transition-transform active:scale-95"
-                  href="https://t.me/+p8C9d8XTIsBiZGQ0"
+                  href="https://t.me/jituandfikre"
                   rel="noopener noreferrer"
                   target="_blank"
                 >
