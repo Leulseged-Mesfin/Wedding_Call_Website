@@ -788,7 +788,7 @@ function WeddingInvitation() {
                   </select>
                   <textarea
                     className="w-full bg-[#1a1712] text-neutral-100 placeholder-neutral-400 text-sm rounded-3xl px-5 py-3 border border-gold-600/40 focus:outline-none focus:border-gold-400 focus:ring-1 focus:ring-gold-400 transition-colors resize-none"
-                    placeholder="Your warm wishes for Asnake & Dr. Tsion..."
+                    placeholder="Your warm wishes for Dr Fikre & Eyerusalem..."
                     rows={3}
                     value={rsvpForm.message}
                     onChange={(e) => setRsvpForm((f) => ({ ...f, message: e.target.value }))}
